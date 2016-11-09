@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="app/css/navbar-top.css" rel="stylesheet">
@@ -36,15 +37,30 @@
       <div class="jumbotron">
         <h1>A simple Javascript Youtube playlist player</h1>
         <p class="lead">Light weight Youtube playlist built with Javascript and Google Youtube V3 API. </p>
+        <br>
+        <h4>Youtube Player</h4>
+        <div style="margin: 36px 0; border: 1px solid #f7f7f7; background-color: #fff;">
+            <iframe id="youtube-player" src="" width="100%" height="588px" frameborder="0"></iframe>
+        </div>
+        <div class="spinner-img">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div style="width: 100%; overflow: scroll;">
+          <div id="youtube-playList-img" class="row" style="width: 3000px;"></div>
+        </div>
+      </div>
 
+      <div class="jumbotron">
+        <h4>Youtube Playlist</h4><br>
         <div class="spinner">
           <div class="bounce1"></div>
           <div class="bounce2"></div>
           <div class="bounce3"></div>
         </div>
-
         <div id="youtube-playList" class="row"></div>
-        <!--<button type="button" id="load-more" class="btn btn-default btn-block" style="margin: 20px 0; border-color: #dae0e6; color: #175877; border-radius: 0;">View More&nbsp;<i class="fa fa-angle-down"></i></button>-->
+        <button type="button" id="load-more" class="btn btn-secondary btn-block" style="margin: 20px 0; border-color: #dae0e6; border-radius: 0;">View More&nbsp;<i class="fa fa-angle-down"></i></button>
       </div>
     </div>
 
@@ -62,24 +78,16 @@
               var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';
               var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';
 
-        		function load() {
-        		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-              }
-        		function onYouTubeApiLoad() {
-        			gapi.client.setApiKey(gapiKey);
-        			addPlaylistToElement(playlistframeId);
-        		}
+      		  function load() {
+      		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+              };
+      		  function onYouTubeApiLoad() {
+      			gapi.client.setApiKey(gapiKey);
+      			addPlaylistToElement(playlistframeId);
+      		  };
 
-              $("#load-more").click(function () {
-                  $(this).toggleClass('open');
-
-                  if ($(this).hasClass('open')) {
-                      $('.playListEntry.hidden-vid').fadeIn(230);
-                      $(this).html("Hide&nbsp;&nbsp;<i class='fa fa-angle-up'></i>");
-                  } else {
-                      $('.playListEntry.hidden-vid').fadeOut(230);
-                      $(this).html("View More&nbsp;&nbsp;<i class='fa fa-angle-down'></i>");
-                  }
+              $('.carousel').carousel({
+                  interval: false
               });
     </script>
     <script src="https://apis.google.com/js/client.js?onload=load"></script>

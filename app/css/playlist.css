@@ -6,39 +6,46 @@
   word-wrap:break-word;
   -ms-word-wrap:break-word;
   overflow-wrap:break-word;
-  min-height: 340px;
+  min-height: 365px;
 }
 
 .playlistDesc {
-  margin: 1% 0 5%;
+  margin: 3px 0 6px;
   color: #777777;
   font-size: 12px;
   line-height: 18px;
 }
 
-.spinner {
+#youtube-playList-img img:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.spinner, .spinner-img {
   margin: 100px auto 0;
   width: 70px;
   text-align: center;
 }
 
-.spinner > div {
+.spinner > div,
+.spinner-img > div {
   width: 18px;
   height: 18px;
   background-color: #333;
-
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
-.spinner .bounce1 {
+.spinner .bounce1,
+.spinner-img .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
-.spinner .bounce2 {
+.spinner .bounce2,
+.spinner-img .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
