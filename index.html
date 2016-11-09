@@ -39,13 +39,17 @@
         <p class="lead">Light weight Youtube playlist built with Javascript and Google Youtube V3 API. </p>
         <br>
         <h4>Youtube Player</h4>
-        <div style="margin: 36px 0; border: 1px solid #f7f7f7; background-color: #fff;">
-            <iframe id="youtube-player" src="" width="100%" height="588px" frameborder="0"></iframe>
-        </div>
-        <div class="spinner-img">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
+        <div style="margin: 36px 0; border: 1px solid #f7f7f7; background-color: #fff; max-height: 588px;">
+            <center>
+                <div class="spinner-img" style="margin-top: 28%;">
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                </div>
+            </center>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="youtube-player" class="embed-responsive-item" src="" width="100%" height="588px" frameborder="0"></iframe>
+            </div>
         </div>
         <div style="width: 100%; overflow: scroll;">
           <div id="youtube-playList-img" class="row" style="width: 3000px;"></div>
@@ -75,9 +79,8 @@
     <script src="app/js/ie10-viewport-bug-workaround.js"></script>
     <script src="app/js/playlist.js"></script>
     <script type="text/javascript">
-              var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';
-              var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';
-
+              var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';   //add your playlist ID here
+              var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';  //add your google API key
       		  function load() {
       		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
               };

@@ -1,8 +1,8 @@
 function YouTubePlayList(id, entries) {
 	this.id = id;
-	this.entries = entries;
-	this.currently_playing = 0;
-	this.randomizer = false;
+	//this.entries = entries;
+	//this.currently_playing = 0;
+	//this.randomizer = false;
 }
 
 function linkify(text){
@@ -26,7 +26,7 @@ function addPlaylistToElement(playlist_id, element_id) {
 	var player_id = playlist_id;
 	var requestOptions = {
 		playlistId: playlist_id,
-		part: 'contentDetails, snippet',
+		part: 'snippet',
         maxResults: 10
 	};
 	var request = gapi.client.youtube.playlistItems.list(requestOptions);
@@ -58,31 +58,34 @@ function addPlaylistToElement(playlist_id, element_id) {
 			var video_id = val.snippet.resourceId.videoId;
             var note = val.snippet.description;
             var title = val.snippet.title;
+            var publishedAt = val.snippet.publishedAt;
+            //var formatDate = publishedAt.toString();
+            var channelTitle = val.snippet.channelTitle;
+            //var comment = val.snippet.comment;
             var linkifyNote = linkify(note);
 
             output += "<div class='playListEntry col-sm-1'>";
-            output += "<img onclick='cueIframe(this)' id='"+ video_id +"' class='responsive-img video-thumbnail' width='100%' height='134px' src='https://img.youtube.com/vi/"+ video_id +"/maxresdefault.jpg'>";
-            output += "<h5 class='playlistDesc'><b>"+ title +"</b></h5>";
+            output += "<img onclick='switchIframe(this)' id='"+ video_id +"' class='img-fluid' width='100%' height='134px' src='https://img.youtube.com/vi/"+ video_id +"/maxresdefault.jpg'>";
+            output += "<h4 class='playlistTitle'>"+ title +"</h4>";
             output += "<p class='playlistDesc'>"+ linkifyNote +"</p>";
+            output += "<p class='playlistDesc'>published at: "+ publishedAt +"</p>";
             output += "</div>";
 
 		});
-        //console.log(output[0]);
+        //console.log(month);
         $('#youtube-playList-img').append(output);
-
-        $("#youtube-player").attr('src', 'https://www.youtube.com/embed/?list='+ player_id +'&amp;showinfo=0?enablejsapi=1');
-
 	}, $('.spinner-img').fadeOut(400));
+
+    $("#youtube-player").attr('src', 'https://www.youtube.com/embed/?list='+ player_id +'&amp;showinfo=0?enablejsapi=1');
 }
 
-function cueIframe(clickedFrame) {
+function switchIframe(clickedFrame) {
     var videoframeId = clickedFrame.id;
     $("#youtube-player").attr('src', 'https://www.youtube.com/embed/'+ videoframeId +'?list='+ playlistframeId +'&amp;showinfo=0?enablejsapi=1');
 };
 
 $("#load-more").click(function () {
     $(this).toggleClass('open');
-
     if ($(this).hasClass('open')) {
         $('.playListEntry.hidden-vid').fadeIn(230);
         $(this).html("Hide&nbsp;&nbsp;<i class='fa fa-angle-up'></i>");

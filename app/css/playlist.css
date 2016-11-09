@@ -6,7 +6,13 @@
   word-wrap:break-word;
   -ms-word-wrap:break-word;
   overflow-wrap:break-word;
-  min-height: 365px;
+  min-height: 300px;
+}
+
+.playlistTitle {
+  margin: 16px 0 12px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .playlistDesc {
@@ -14,7 +20,14 @@
   color: #777777;
   font-size: 12px;
   line-height: 18px;
+  height: 56px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
 }
+
+
 
 #youtube-playList-img img:hover {
   cursor: pointer;
