@@ -18,18 +18,19 @@
     <link href="app/css/navbar-top.css" rel="stylesheet">
     <link href="app/css/playlist.css" rel="stylesheet">
   </head>
-
   <body>
-
    <div class="pos-f-t">
-      <div class="collapse" id="navbar-header">
-        <div class="container-fluid bg-inverse p-1">
-          <h3>Collapsed content</h3>
-          <p>Toggleable via the navbar brand.</p>
-        </div>
-      </div>
       <div class="navbar navbar-light bg-faded navbar-static-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+           <div class="container">
+                <div style="margin: 12px 0;">
+                    <nav class="nav nav-inline">
+                      <a class="nav-link">Playlist Player</a>
+                      <a class="nav-link active" href="#">Demo</a>
+                      <a class="nav-link" href="#">Documentation</a>
+                      <a class="nav-link float-lg-right" href="https://github.com/Yuhao-nyc/youtube-playlist">Download</a>
+                    </nav>
+                </div>
+           </div>
       </div>
     </div>
 
@@ -39,9 +40,9 @@
         <p class="lead">Light weight Youtube playlist built with Javascript and Google Youtube V3 API. </p>
         <br>
         <h4>Youtube Player</h4>
-        <div style="margin: 36px 0; border: 1px solid #f7f7f7; background-color: #fff; max-height: 588px;">
+        <div class="player-container">
             <center>
-                <div class="spinner-img" style="margin-top: 28%;">
+                <div class="spinner-img">
                   <div class="bounce1"></div>
                   <div class="bounce2"></div>
                   <div class="bounce3"></div>
@@ -64,10 +65,9 @@
           <div class="bounce3"></div>
         </div>
         <div id="youtube-playList" class="row"></div>
-        <button type="button" id="load-more" class="btn btn-secondary btn-block" style="margin: 20px 0; border-color: #dae0e6; border-radius: 0;">View More&nbsp;<i class="fa fa-angle-down"></i></button>
+        <button type="button" id="player-load-more" class="btn btn-secondary btn-block">View More&nbsp;<i class="fa fa-angle-down"></i></button>
       </div>
     </div>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -78,7 +78,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="app/js/ie10-viewport-bug-workaround.js"></script>
     <script src="app/js/playlist.js"></script>
-    <script type="text/javascript">
+    <script>
               var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';   //add your playlist ID here
               var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';  //add your google API key
       		  function load() {

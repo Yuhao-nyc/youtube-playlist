@@ -6,7 +6,7 @@
   word-wrap:break-word;
   -ms-word-wrap:break-word;
   overflow-wrap:break-word;
-  min-height: 300px;
+  margin-bottom: 16px;
 }
 
 .playlistTitle {
@@ -20,22 +20,30 @@
   color: #777777;
   font-size: 12px;
   line-height: 18px;
-  height: 56px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 220px;
 }
 
+.player-container {
+  margin: 36px 0;
+  background-color: #fff;
+  max-height: 588px;
+}
 
+#player-load-more {
+  margin: 20px 0;
+  border-color: #dae0e6;
+  border-radius: 0;
+}
 
 #youtube-playList-img img:hover {
   cursor: pointer;
   opacity: 0.6;
 }
 
+.spinner-img {
+  padding-top: 25%;
+}
+
 .spinner, .spinner-img {
-  margin: 100px auto 0;
   width: 70px;
   text-align: center;
 }
