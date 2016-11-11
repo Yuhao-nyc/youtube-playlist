@@ -79,19 +79,19 @@
     <script src="app/js/ie10-viewport-bug-workaround.js"></script>
     <script src="app/js/playlist.js"></script>
     <script>
-              var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';   //add your playlist ID here
-              var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';  //add your google API key
-      		  function load() {
-      		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-              };
-      		  function onYouTubeApiLoad() {
-      			gapi.client.setApiKey(gapiKey);
-      			addPlaylistToElement(playlistframeId);
-      		  };
+            var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';   //add your playlist ID here
+            var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';  //add your google API key
+    		  function load() {
+    		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+            };
+    		  function onYouTubeApiLoad() {
+    			gapi.client.setApiKey(gapiKey);
+    			addPlaylistToElement(playlistframeId);
+    		  };
 
-              $('.carousel').carousel({
-                  interval: false
-              });
+            $('.carousel').carousel({
+                interval: false
+            });
     </script>
     <script src="https://apis.google.com/js/client.js?onload=load"></script>
   </body>

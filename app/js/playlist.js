@@ -65,6 +65,9 @@ function addPlaylistToElement(playlist_id, element_id) {
 function switchIframe(clickedFrame) {
     var videoframeId = clickedFrame.id;
     $("#youtube-player").attr('src', 'https://www.youtube.com/embed/'+ videoframeId +'?list='+ playlistframeId +'&showinfo=0?enablejsapi=1');
+    $('html, body').animate({
+        scrollTop: $("#youtube-player").offset().top - 80
+    }, 600);
 };
 
 $("#player-load-more").click(function () {
