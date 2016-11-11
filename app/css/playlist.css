@@ -94,6 +94,10 @@
    #youtube-playList-img {
       width: 3000px;
     }
+    .playlist-container {
+      width: 100%;
+      overflow: scroll;
+    }
 }
 
 @media (max-width: 768px) {
