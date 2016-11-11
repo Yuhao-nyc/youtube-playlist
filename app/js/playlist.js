@@ -47,7 +47,7 @@ function addPlaylistToElement(playlist_id, element_id) {
             output += "</div>";
 
             output_img += "<div class='playListEntry col-sm-1'>";
-            output_img += "<img onclick='switchIframe(this)' id='"+ video_id +"' class='img-fluid' width='100%' height='134px' src='https://img.youtube.com/vi/"+ video_id +"/maxresdefault.jpg'>";
+            output_img += "<img onclick='switchIframe(this)' id='"+ video_id +"' class='img-fluid img-playlist' width='100%' height='134px' src='https://img.youtube.com/vi/"+ video_id +"/maxresdefault.jpg'>";
             output_img += "<h4 class='playlistTitle'>"+ title +"</h4>";
             output_img += "<p class='playlistDesc'>"+ linkifyNote +"</p>";
             output_img += "<p class='playlistDesc'>published at: "+ publishedAt +"</p>";
@@ -64,7 +64,7 @@ function addPlaylistToElement(playlist_id, element_id) {
 
 function switchIframe(clickedFrame) {
     var videoframeId = clickedFrame.id;
-    $("#youtube-player").attr('src', 'https://www.youtube.com/embed/'+ videoframeId +'?list='+ playlistframeId +'&amp;showinfo=0?enablejsapi=1');
+    $("#youtube-player").attr('src', 'https://www.youtube.com/embed/'+ videoframeId +'?list='+ playlistframeId +'&showinfo=0?enablejsapi=1');
 };
 
 $("#player-load-more").click(function () {

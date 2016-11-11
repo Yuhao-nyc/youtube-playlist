@@ -1,3 +1,7 @@
+.nav-link {
+  font-weight: 600;
+}
+
 .playListEntry.hidden-vid {
   display: none;
 }
@@ -84,4 +88,23 @@
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
+}
+
+@media (min-width: 1200px) {
+   #youtube-playList-img {
+      width: 3000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h1, h1 {
+      font-size: 2rem;
+    }
+    .jumbotron {
+      background-color: #fff;
+      padding-top: 0.6rem;
+    }
+    .img-playlist {
+      border: 1px solid #eee;
+    }
 }
