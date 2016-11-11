@@ -1,4 +1,4 @@
-# youtube-playlist
+# Youtube Playlist Player
 A simple javascript Youtube Playlist and Player
 
 ## Usage
