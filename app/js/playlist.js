@@ -59,7 +59,7 @@ function addPlaylistToElement(playlist_id, element_id) {
         $('#youtube-playList > div').slice(-6).addClass("hidden-vid");
 
 	}, $('.spinner, .spinner-img').fadeOut(360));
-    $("#youtube-player").attr('src', 'https://www.youtube.com/embed/?list='+ player_id +'&amp;showinfo=0?enablejsapi=1');
+    $("#youtube-player").attr('src', 'https://www.youtube.com/embed/?list='+ player_id +'&amp;showinfo=0');
 }
 
 function switchIframe(clickedFrame) {
