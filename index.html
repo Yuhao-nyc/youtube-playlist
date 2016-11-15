@@ -82,14 +82,14 @@
     <script src="app/js/playlist.js"></script>
     <script>
             var playlistframeId = 'PL590L5WQmH8cUsRyHkk1cPGxW0j5kmhm0';   //add your playlist ID here
-            var gapiKey = 'AIzaSyAzOUQhy_zl-F3RYY-v6FJQtZhmI8qUQxg';  //add your google API key
-    		  function load() {
+            var gapiKey = 'AIzaSyAX8Z9p9vBrI1rjqlnYazFjYm34JCHMoK0';  //add your google API key
+    		function load() {
     		    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
             };
-    		  function onYouTubeApiLoad() {
+    		function onYouTubeApiLoad() {
     			gapi.client.setApiKey(gapiKey);
     			addPlaylistToElement(playlistframeId);
-    		  };
+    		};
 
             $('.carousel').carousel({
                 interval: false
