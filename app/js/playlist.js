@@ -44,8 +44,8 @@ function addPlaylistToElement(playlist_id, element_id) {
             output_img += "<p class='playlistDesc'>published at: "+ publishedAt +"</p>";
             output_img += "</div>";
 
-            output += "<div class='playListEntry col-sm-4'>";
-            output += "<iframe class='embed-responsive-item' width='100%' height='184px' src='https://www.youtube.com/embed/"+ video_id +"?list=;"+ player_id +"="+ video_id +"&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>";
+            output += "<div class='playListEntry col-sm-3'>";
+            output += "<iframe class='embed-responsive-item' width='100%' height='133px' src='https://www.youtube.com/embed/"+ video_id +"?list=;"+ player_id +"="+ video_id +"&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>";
             output += "<h4 class='playlistTitle'>"+ title +"</h4>";
             output += "<p class='playlistDesc'>by&nbsp;"+ channelTitle +"</p>";
             output += "</div>";
