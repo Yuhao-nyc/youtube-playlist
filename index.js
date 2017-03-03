@@ -5,6 +5,7 @@ var path = require('path');
 
 app.listen(3000, function () {
   console.log('my app is listening on port 3000!');
+  console.log('and 5%2 equals' + 5%2);
 });
 
 //using static files (css, js, png etc)
