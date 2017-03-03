@@ -1,6 +1,8 @@
 # Youtube Playlist Player
 A simple javascript Youtube Playlist and Player
 
+Local server set up with Node.JS, Express and NodeMon
+
 ### You can find a demo [here](https://yuhao-nyc.github.io/youtube-playlist/)
 
 ### Usage
