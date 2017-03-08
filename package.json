@@ -18,5 +18,13 @@
   "homepage": "https://github.com/Yuhao-nyc/youtube-playlist#readme",
   "devDependencies": {
     "less": "^2.7.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "cookie-parse": "^0.4.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
+    "nodemon": "^1.11.0"
   }
 }

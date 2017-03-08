@@ -14,6 +14,8 @@ app.use('/app', express.static('./app'));
 //routing
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
+
+    //res.render('index.html');
 });
 
 //404

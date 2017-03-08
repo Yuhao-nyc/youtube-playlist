@@ -1,0 +1,30 @@
+<!doctype html>
+
+  <head>
+    <title>my very first page</title>
+    <link rel="stylesheet" href="/style.scss">
+  </head>
+  <body>
+
+    <h1><%= title %>testing test...</h1>
+
+    <h2>the time now is <%= new Date()%></h2>
+
+    <ul>
+        <% for (var i=0; i<items.length; i++) { %>
+            <li><%= items[i].desc %></li>
+        <% } %>
+    </ul>
+
+    <form action="/add" method="post">
+        <input type="text" name="newItem" /><br />
+        <input type="submit" />
+    </form>
+
+
+    <form action="/" method="post">
+        Your name: <input type="text" name="firstName" /><br />
+        <input type="submit" />
+    </form>
+  </body>
+</html>
